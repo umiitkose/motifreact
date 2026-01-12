@@ -1,0 +1,36 @@
+{
+  "name": "@motif-ui/react",
+  "version": "0.0.4",
+  "description": "Another React UI library created by public sector developers",
+  "author": "MOTIF UI | Turksat e-Government Application Development",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motif-ui/react-ui.git"
+  },
+  "homepage": "https://github.com/motif-ui/react-ui#readme",
+  "bugs": {
+    "url": "https://github.com/motif-ui/react-ui/issues"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "motif",
+    "react",
+    "ui",
+    "library",
+    "component",
+    "public",
+    "sector",
+    "design",
+    "token",
+    "turksat",
+    "e-devlet",
+    "turkiye"
+  ]
+}
