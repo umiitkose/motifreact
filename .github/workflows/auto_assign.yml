@@ -6,11 +6,22 @@ on:
 
 permissions:
   pull-requests: write
-  contents: none
+  contents: read
 
 jobs:
   assign-and-review:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: 'false'
+
+      - name: Check core team membership
+        id: check_team
+        uses: ./.github/actions/check-core-team
+        with:
+          pr-author: ${{ github.event.pull_request.user.login }}
+
       - name: Assign PR to author
+        if: steps.check_team.outputs.is-internal == 'true'
         uses: toshimaru/auto-author-assign@v3.0.1
