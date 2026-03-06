@@ -24,7 +24,7 @@ jobs:
             const isActorInternal = coreTeam.includes(context.actor);
 
             const issueNumber =
-              context.eventName === 'pull_request'
+              context.payload.pull_request
                 ? context.payload.pull_request.number
                 : context.payload.issue.number;
 
